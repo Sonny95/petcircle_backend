@@ -6,6 +6,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 
+
 const allowlist = ['http://localhost', 'http://localhost:3000','http://23.100.18.65:8080'];
 app.use(express.static('public'));
 const corsOptionsDelegate = function (req, callback) {

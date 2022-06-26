@@ -1,5 +1,5 @@
 const express = require('express');
-const {data, data2} = require("../sampleData");
+const db = require("../db");
 const router = express.Router();
 
 
@@ -8,7 +8,13 @@ const router = express.Router();
  * @description 정보 가져오기
  */
 router.get("/graphData", (req, res) => {
-    res.send({lineData :data, columnData : data2})
+
+    db.query('SELECT * FROM user.bird_product_list', [], (err, rows)=>{
+        console.log(rows,'::::')
+    })
+
+
+    // res.send({lineData : data, columnData : data2})
 });
 
 
