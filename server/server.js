@@ -1,10 +1,13 @@
 const express = require('express');
 const app = express();
 const port = 8080;
+const product = require('./module/product');
 const dashboard = require('./module/dashboard');
+const member = require('./module/member');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+
 
 
 const allowlist = ['http://localhost', 'http://localhost:3000','http://23.100.18.65:8080'];
@@ -28,7 +31,9 @@ app.use(cookieParser('kakaoCooKiEKey'));
 
 
 
+app.use('/product', product);
 app.use('/dashboard', dashboard);
+app.use('/member', member);
 
 
 function scheduleGc() {

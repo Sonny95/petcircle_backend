@@ -7,17 +7,46 @@ const router = express.Router();
 /**
  * @description 정보 가져오기
  */
-router.get("/graphData", (req, res) => {
+router.get("/birdList", (req, res) => {
 
-    db.query('SELECT * FROM user.bird_product_list', [], (err, rows)=>{
-        console.log(rows,'::::')
+    db.query('SELECT * FROM bird_product_list', [], (err, rows)=>{
+        console.log(rows,':::::')
+        res.send(rows)
     })
-
-
-    // res.send({lineData : data, columnData : data2})
 });
 
 
+/**
+ * @description 정보 가져오기
+ */
+router.get("/dogList", (req, res) => {
+
+    db.query('SELECT * FROM dog_product_list', [], (err, rows)=>{
+        console.log(rows,':::::')
+        res.send(rows)
+    })
+});
+
+/**
+ * @description 정보 가져오기
+ */
+router.get("/catList", (req, res) => {
+
+    db.query('SELECT * FROM cat_product_list', [], (err, rows)=>{
+        console.log(rows,':::::')
+        res.send(rows)
+    })
+});
+/**
+ * @description 정보 가져오기
+ */
+router.get("/otherList", (req, res) => {
+
+    db.query('SELECT * FROM other_product_list', [], (err, rows)=>{
+        console.log(rows,':::::')
+        res.send(rows)
+    })
+});
 
 
 

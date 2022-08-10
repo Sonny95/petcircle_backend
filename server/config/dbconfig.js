@@ -1,9 +1,9 @@
 const dbconfig = {
-	host: 'localhost',
-	user: 'root',
-	password: '1234',
+	host: 'miabeom.mysql.database.azure.com',
+	user: 'thswlgml9598@miabeom',
+	password: 'ghdi9598!',
 	port: 3306,
-	database: 'user',
+	database: 'pet',
 	ssl : true
 };
 
